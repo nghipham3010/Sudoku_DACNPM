@@ -13,7 +13,7 @@ namespace Sudoku_Game
     public partial class Form1 : Form
     {
         private string username; // Khai báo biến lưu tên người dùng
-        public Form1()
+        public Form1(string username)
         {
             InitializeComponent();
             this.lblName.BackColor = Color.Transparent;
