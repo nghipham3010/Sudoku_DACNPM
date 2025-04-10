@@ -216,7 +216,9 @@ namespace Sudoku_Game
                         // Kiểm tra số lần sai
                         if (incorrectAttempts > 3)
                         {
-                            ShowLoseForm(); // Hiển thị thông báo thua
+                            // ==================== THÔNG BÁO THUA ====================
+                            //ShowLoseForm(); // Hiển thị thông báo thua
+                            //=========================================================
                         }
                     }
                 }
@@ -229,7 +231,9 @@ namespace Sudoku_Game
                     // Kiểm tra số lần sai
                     if (incorrectAttempts > 3)
                     {
-                        ShowLoseForm(); // Hiển thị thông báo thua
+                        // ==================== THÔNG BÁO THUA ====================
+                        //ShowLoseForm(); // Hiển thị thông báo thua
+                        //===========================================================
                     }
                 }
             }
@@ -660,13 +664,15 @@ namespace Sudoku_Game
             // Cập nhật điểm số lên ToolStripStatusLabel
             toolStripStatusLabel3.Text = $"Điểm: {score}";
         }
-        private void ShowLoseForm()
-        {
-            timer.Stop();
-            frmLose loseForm = new frmLose(score, username); // Tạo một instance của frmLose
-            loseForm.ShowDialog(); // Hiển thị form thông báo thua
-            this.Close(); // Đóng form chơi
-        }
 
+        // ==================== THÔNG BÁO THUA ====================
+        //private void ShowLoseForm()
+        //{
+        //    timer.Stop();
+        //    frmLose loseForm = new frmLose(score, username); // Tạo một instance của frmLose
+        //    loseForm.ShowDialog(); // Hiển thị form thông báo thua
+        //    this.Close(); // Đóng form chơi
+        //}
+        //==========================================================
     }
 }
