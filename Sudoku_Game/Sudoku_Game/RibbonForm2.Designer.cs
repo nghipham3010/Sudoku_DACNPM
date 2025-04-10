@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.btnToFromLogin = new DevExpress.XtraBars.Ribbon.RibbonControl();
-            this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.btnOut = new DevExpress.XtraBars.BarButtonItem();
             this.btnDelete = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
-            this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.btnDeleteUser = new DevExpress.XtraBars.BarButtonItem();
+            this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.dgvLogin = new System.Windows.Forms.DataGridView();
             this.colUserName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colPass = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,22 +57,47 @@
             this.btnDelete,
             this.barButtonItem1,
             this.barButtonItem2,
-            this.btnDeleteUser});
+            this.btnDeleteUser,
+            this.btnToFromLogin.SearchEditItem});
             this.btnToFromLogin.Location = new System.Drawing.Point(0, 0);
             this.btnToFromLogin.MaxItemId = 6;
             this.btnToFromLogin.Name = "btnToFromLogin";
             this.btnToFromLogin.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
-            // 
-            // 
-            // 
-            this.btnToFromLogin.SearchEditItem.AccessibleName = "Search Item";
-            this.btnToFromLogin.SearchEditItem.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Left;
-            this.btnToFromLogin.SearchEditItem.EditWidth = 150;
-            this.btnToFromLogin.SearchEditItem.Id = -5000;
-            this.btnToFromLogin.SearchEditItem.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
             this.btnToFromLogin.Size = new System.Drawing.Size(1024, 231);
             this.btnToFromLogin.StatusBar = this.ribbonStatusBar;
+            // 
+            // btnOut
+            // 
+            this.btnOut.Caption = "Thoát";
+            this.btnOut.Id = 1;
+            this.btnOut.Name = "btnOut";
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Caption = "Xóa";
+            this.btnDelete.Id = 2;
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDelete_ItemClick);
+            // 
+            // barButtonItem1
+            // 
+            this.barButtonItem1.Caption = "Trở về đăng nhập";
+            this.barButtonItem1.Id = 3;
+            this.barButtonItem1.Name = "barButtonItem1";
+            // 
+            // barButtonItem2
+            // 
+            this.barButtonItem2.Caption = "Bảng Xếp Hạng";
+            this.barButtonItem2.Id = 4;
+            this.barButtonItem2.Name = "barButtonItem2";
+            // 
+            // btnDeleteUser
+            // 
+            this.btnDeleteUser.Caption = "Xóa tài khoản";
+            this.btnDeleteUser.Id = 5;
+            this.btnDeleteUser.Name = "btnDeleteUser";
+            this.btnDeleteUser.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDeleteUser_ItemClick);
             // 
             // ribbonPage1
             // 
@@ -91,49 +116,18 @@
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             this.ribbonPageGroup1.Text = "ribbonPageGroup1";
             // 
-            // ribbonStatusBar
-            // 
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 413);
-            this.ribbonStatusBar.Name = "ribbonStatusBar";
-            this.ribbonStatusBar.Ribbon = this.btnToFromLogin;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(1024, 36);
-            // 
-            // btnOut
-            // 
-            this.btnOut.Caption = "Thoát";
-            this.btnOut.Id = 1;
-            this.btnOut.Name = "btnOut";
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.Caption = "Xóa";
-            this.btnDelete.Id = 2;
-            this.btnDelete.Name = "btnDelete";
-            // 
-            // barButtonItem1
-            // 
-            this.barButtonItem1.Caption = "Trở về đăng nhập";
-            this.barButtonItem1.Id = 3;
-            this.barButtonItem1.Name = "barButtonItem1";
-            // 
-            // barButtonItem2
-            // 
-            this.barButtonItem2.Caption = "Bảng Xếp Hạng";
-            this.barButtonItem2.Id = 4;
-            this.barButtonItem2.Name = "barButtonItem2";
-            // 
             // ribbonPageGroup2
             // 
             this.ribbonPageGroup2.ItemLinks.Add(this.btnDeleteUser);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             this.ribbonPageGroup2.Text = "ribbonPageGroup2";
             // 
-            // btnDeleteUser
+            // ribbonStatusBar
             // 
-            this.btnDeleteUser.Caption = "Xóa tài khoản";
-            this.btnDeleteUser.Id = 5;
-            this.btnDeleteUser.Name = "btnDeleteUser";
-            this.btnDeleteUser.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDeleteUser_ItemClick);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 413);
+            this.ribbonStatusBar.Name = "ribbonStatusBar";
+            this.ribbonStatusBar.Ribbon = this.btnToFromLogin;
+            this.ribbonStatusBar.Size = new System.Drawing.Size(1024, 36);
             // 
             // dgvLogin
             // 
