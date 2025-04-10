@@ -79,6 +79,24 @@
     </Compile>
     <Compile Include="SudokuGenerator.cs" />
     <Compile Include="SudokuSolver.cs" />
+    <Compile Include="XtraForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XtraForm1.Designer.cs">
+      <DependentUpon>XtraForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XtraForm3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XtraForm3.Designer.cs">
+      <DependentUpon>XtraForm3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XtraForm4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XtraForm4.Designer.cs">
+      <DependentUpon>XtraForm4.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -95,6 +113,15 @@
     </Compile>
     <EmbeddedResource Include="RibbonForm1.resx">
       <DependentUpon>RibbonForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraForm1.resx">
+      <DependentUpon>XtraForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraForm3.resx">
+      <DependentUpon>XtraForm3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraForm4.resx">
+      <DependentUpon>XtraForm4.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -114,6 +141,12 @@
     <Content Include="image\button_background.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\z6445097676451_db6aaec868c8fda4a710e8eff30026551.jpg" />
+    <None Include="Resources\z6445094979319_a507553a2d4f00b74b0842a57ce834261.jpg" />
+    <None Include="Resources\z6483821123620_9563d1c5517aef1416a9780631115728.jpg" />
+    <None Include="Resources\z6483821073858_5924954001d30e075afb2ae6e2017668.jpg" />
+    <None Include="Resources\13f9980f-bedc-478f-8573-7e288671d0b1_128x128.png" />
+    <None Include="Resources\R.jpg" />
     <None Include="Resources\z6433009218406_a2aad55a54a3b2369773acb7f27dc1c7.jpg" />
     <None Include="Resources\z6445097676451_db6aaec868c8fda4a710e8eff3002655.jpg" />
     <None Include="Resources\z6445094979319_a507553a2d4f00b74b0842a57ce83426.jpg" />

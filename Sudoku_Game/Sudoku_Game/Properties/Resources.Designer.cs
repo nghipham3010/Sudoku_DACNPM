@@ -63,6 +63,26 @@ namespace Sudoku_Game.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _13f9980f_bedc_478f_8573_7e288671d0b1_128x128 {
+            get {
+                object obj = ResourceManager.GetObject("13f9980f-bedc-478f-8573-7e288671d0b1_128x128", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap R {
+            get {
+                object obj = ResourceManager.GetObject("R", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap z6433009218406_a2aad55a54a3b2369773acb7f27dc1c7 {
             get {
                 object obj = ResourceManager.GetObject("z6433009218406_a2aad55a54a3b2369773acb7f27dc1c7", resourceCulture);
@@ -93,9 +113,49 @@ namespace Sudoku_Game.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap z6445094979319_a507553a2d4f00b74b0842a57ce834261 {
+            get {
+                object obj = ResourceManager.GetObject("z6445094979319_a507553a2d4f00b74b0842a57ce834261", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap z6445097676451_db6aaec868c8fda4a710e8eff3002655 {
             get {
                 object obj = ResourceManager.GetObject("z6445097676451_db6aaec868c8fda4a710e8eff3002655", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap z6445097676451_db6aaec868c8fda4a710e8eff30026551 {
+            get {
+                object obj = ResourceManager.GetObject("z6445097676451_db6aaec868c8fda4a710e8eff30026551", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap z6483821073858_5924954001d30e075afb2ae6e2017668 {
+            get {
+                object obj = ResourceManager.GetObject("z6483821073858_5924954001d30e075afb2ae6e2017668", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap z6483821123620_9563d1c5517aef1416a9780631115728 {
+            get {
+                object obj = ResourceManager.GetObject("z6483821123620_9563d1c5517aef1416a9780631115728", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
