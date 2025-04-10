@@ -101,5 +101,33 @@ namespace Sudoku_Game
                 MessageBox.Show(message, "Thông Tin Người Dùng");
             }
         }
+
+        private void btnDelete_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            var nonAdminUsers = context.LoginInformations
+      .Where(u => u.Quyen.ToLower() != "admin")
+      .ToList();
+
+            if (nonAdminUsers.Count == 0)
+            {
+                MessageBox.Show("Không có tài khoản nào để xóa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            DialogResult result = MessageBox.Show(
+                "Bạn có chắc chắn muốn xóa tất cả tài khoản người dùng (trừ admin)?",
+                "Xác nhận",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning);
+
+            if (result == DialogResult.Yes)
+            {
+                context.LoginInformations.RemoveRange(nonAdminUsers);
+                context.SaveChanges();
+
+                MessageBox.Show("Đã xóa tất cả tài khoản người dùng!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LoadData(); // Làm mới DataGridView
+            }
+        }
     }
 }
