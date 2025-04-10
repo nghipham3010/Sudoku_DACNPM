@@ -83,6 +83,12 @@
     <Compile Include="RibbonForm2.Designer.cs">
       <DependentUpon>RibbonForm2.cs</DependentUpon>
     </Compile>
+    <Compile Include="RibbonForm3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RibbonForm3.Designer.cs">
+      <DependentUpon>RibbonForm3.cs</DependentUpon>
+    </Compile>
     <Compile Include="SudokuGenerator.cs" />
     <Compile Include="SudokuSolver.cs" />
     <Compile Include="XtraForm1.cs">
@@ -128,6 +134,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RibbonForm2.resx">
       <DependentUpon>RibbonForm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RibbonForm3.resx">
+      <DependentUpon>RibbonForm3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="XtraForm1.resx">
       <DependentUpon>XtraForm1.cs</DependentUpon>

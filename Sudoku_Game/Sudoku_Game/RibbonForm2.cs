@@ -129,5 +129,18 @@ namespace Sudoku_Game
                 LoadData(); // Làm mới DataGridView
             }
         }
+
+        private void frmAdmin_Load(object sender, EventArgs e)
+        {
+            List<LoginInformation> listUsers = context.LoginInformations.ToList(); // Lấy danh sách người dùng
+            BrindGrid(listUsers); // Truyền dữ liệu vào DataGridView
+            LoadData(); // Gọi LoadData để làm mới dữ liệu
+        }
+
+        private void barButtonItem2_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frmForm3 frmForm = new frmForm3();
+            frmForm.Show();
+        }
     }
 }

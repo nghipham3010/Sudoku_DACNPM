@@ -57,7 +57,8 @@ namespace Sudoku_Game
                     this.username = username;
                     if (user.Quyen == "admin")
                     {
-                        /* */
+                        frmAdmin adminForm = new frmAdmin();
+                        adminForm.Show();
                     }
                     else
                     {

@@ -53,12 +53,12 @@
             this.btnToFromLogin.ExpandCollapseItem.Id = 0;
             this.btnToFromLogin.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.btnToFromLogin.ExpandCollapseItem,
+            this.btnToFromLogin.SearchEditItem,
             this.btnOut,
             this.btnDelete,
             this.barButtonItem1,
             this.barButtonItem2,
-            this.btnDeleteUser,
-            this.btnToFromLogin.SearchEditItem});
+            this.btnDeleteUser});
             this.btnToFromLogin.Location = new System.Drawing.Point(0, 0);
             this.btnToFromLogin.MaxItemId = 6;
             this.btnToFromLogin.Name = "btnToFromLogin";
@@ -91,6 +91,7 @@
             this.barButtonItem2.Caption = "Bảng Xếp Hạng";
             this.barButtonItem2.Id = 4;
             this.barButtonItem2.Name = "barButtonItem2";
+            this.barButtonItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem2_ItemClick);
             // 
             // btnDeleteUser
             // 
@@ -138,12 +139,11 @@
             this.colEmail,
             this.colQuyen,
             this.colScore});
-            this.dgvLogin.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvLogin.Location = new System.Drawing.Point(0, 231);
             this.dgvLogin.Name = "dgvLogin";
             this.dgvLogin.RowHeadersWidth = 62;
             this.dgvLogin.RowTemplate.Height = 28;
-            this.dgvLogin.Size = new System.Drawing.Size(1024, 182);
+            this.dgvLogin.Size = new System.Drawing.Size(941, 105);
             this.dgvLogin.TabIndex = 2;
             this.dgvLogin.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLogin_CellContentClick);
             // 
@@ -195,6 +195,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.StatusBar = this.ribbonStatusBar;
             this.Text = "Admin";
+            this.Load += new System.EventHandler(this.frmAdmin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btnToFromLogin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLogin)).EndInit();
             this.ResumeLayout(false);
