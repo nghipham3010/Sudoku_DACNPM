@@ -35,6 +35,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.colTenTk = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDiem = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnResetScore = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -44,9 +45,10 @@
             this.ribbon.ExpandCollapseItem.Id = 0;
             this.ribbon.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbon.ExpandCollapseItem,
-            this.ribbon.SearchEditItem});
+            this.ribbon.SearchEditItem,
+            this.btnResetScore});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 1;
+            this.ribbon.MaxItemId = 2;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
@@ -62,6 +64,7 @@
             // 
             // ribbonPageGroup1
             // 
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnResetScore);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             this.ribbonPageGroup1.Text = "ribbonPageGroup1";
             // 
@@ -101,6 +104,13 @@
             this.colDiem.Name = "colDiem";
             this.colDiem.Width = 150;
             // 
+            // btnResetScore
+            // 
+            this.btnResetScore.Caption = "Reset Score";
+            this.btnResetScore.Id = 1;
+            this.btnResetScore.Name = "btnResetScore";
+            this.btnResetScore.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnResetScore_ItemClick);
+            // 
             // frmForm3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -130,5 +140,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTenTk;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDiem;
+        private DevExpress.XtraBars.BarButtonItem btnResetScore;
     }
 }
