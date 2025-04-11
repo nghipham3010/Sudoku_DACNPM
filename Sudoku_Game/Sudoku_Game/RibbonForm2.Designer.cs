@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAdmin));
             this.btnToFromLogin = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.btnOut = new DevExpress.XtraBars.BarButtonItem();
             this.btnDelete = new DevExpress.XtraBars.BarButtonItem();
@@ -35,6 +36,7 @@
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.btnDeleteUser = new DevExpress.XtraBars.BarButtonItem();
             this.btnAddAdmin = new DevExpress.XtraBars.BarButtonItem();
+            this.btnExportPdf = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -45,13 +47,13 @@
             this.colEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colQuyen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colScore = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnExportPdf = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.btnToFromLogin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLogin)).BeginInit();
             this.SuspendLayout();
             // 
             // btnToFromLogin
             // 
+            this.btnToFromLogin.EmptyAreaImageOptions.ImagePadding = new System.Windows.Forms.Padding(20, 21, 20, 21);
             this.btnToFromLogin.ExpandCollapseItem.Id = 0;
             this.btnToFromLogin.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.btnToFromLogin.ExpandCollapseItem,
@@ -64,11 +66,13 @@
             this.btnAddAdmin,
             this.btnExportPdf});
             this.btnToFromLogin.Location = new System.Drawing.Point(0, 0);
+            this.btnToFromLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnToFromLogin.MaxItemId = 8;
             this.btnToFromLogin.Name = "btnToFromLogin";
+            this.btnToFromLogin.OptionsMenuMinWidth = 220;
             this.btnToFromLogin.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
-            this.btnToFromLogin.Size = new System.Drawing.Size(1024, 231);
+            this.btnToFromLogin.Size = new System.Drawing.Size(683, 158);
             this.btnToFromLogin.StatusBar = this.ribbonStatusBar;
             this.btnToFromLogin.Click += new System.EventHandler(this.btnToFromLogin_Click);
             // 
@@ -76,12 +80,14 @@
             // 
             this.btnOut.Caption = "Thoát";
             this.btnOut.Id = 1;
+            this.btnOut.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnOut.ImageOptions.SvgImage")));
             this.btnOut.Name = "btnOut";
             // 
             // btnDelete
             // 
             this.btnDelete.Caption = "Xóa";
             this.btnDelete.Id = 2;
+            this.btnDelete.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDelete.ImageOptions.SvgImage")));
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDelete_ItemClick);
             // 
@@ -89,12 +95,14 @@
             // 
             this.barButtonItem1.Caption = "Trở về đăng nhập";
             this.barButtonItem1.Id = 3;
+            this.barButtonItem1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem1.ImageOptions.SvgImage")));
             this.barButtonItem1.Name = "barButtonItem1";
             // 
             // barButtonItem2
             // 
             this.barButtonItem2.Caption = "Bảng Xếp Hạng";
             this.barButtonItem2.Id = 4;
+            this.barButtonItem2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem2.ImageOptions.SvgImage")));
             this.barButtonItem2.Name = "barButtonItem2";
             this.barButtonItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem2_ItemClick);
             // 
@@ -102,6 +110,7 @@
             // 
             this.btnDeleteUser.Caption = "Xóa tài khoản";
             this.btnDeleteUser.Id = 5;
+            this.btnDeleteUser.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDeleteUser.ImageOptions.SvgImage")));
             this.btnDeleteUser.Name = "btnDeleteUser";
             this.btnDeleteUser.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDeleteUser_ItemClick);
             // 
@@ -109,8 +118,17 @@
             // 
             this.btnAddAdmin.Caption = "Thêm Admin";
             this.btnAddAdmin.Id = 6;
+            this.btnAddAdmin.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnAddAdmin.ImageOptions.SvgImage")));
             this.btnAddAdmin.Name = "btnAddAdmin";
             this.btnAddAdmin.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAddAdmin_ItemClick);
+            // 
+            // btnExportPdf
+            // 
+            this.btnExportPdf.Caption = "Xuất file";
+            this.btnExportPdf.Id = 7;
+            this.btnExportPdf.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnExportPdf.ImageOptions.SvgImage")));
+            this.btnExportPdf.Name = "btnExportPdf";
+            this.btnExportPdf.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnExportPdf_ItemClick);
             // 
             // ribbonPage1
             // 
@@ -118,7 +136,7 @@
             this.ribbonPageGroup1,
             this.ribbonPageGroup2});
             this.ribbonPage1.Name = "ribbonPage1";
-            this.ribbonPage1.Text = "ribbonPage1";
+            this.ribbonPage1.Text = "Admin";
             // 
             // ribbonPageGroup1
             // 
@@ -128,21 +146,22 @@
             this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem2);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnExportPdf);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
-            this.ribbonPageGroup1.Text = "ribbonPageGroup1";
+            this.ribbonPageGroup1.Text = "Chức năng";
             // 
             // ribbonPageGroup2
             // 
             this.ribbonPageGroup2.ItemLinks.Add(this.btnDeleteUser);
             this.ribbonPageGroup2.ItemLinks.Add(this.btnAddAdmin);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
-            this.ribbonPageGroup2.Text = "ribbonPageGroup2";
+            this.ribbonPageGroup2.Text = "Thông tin";
             // 
             // ribbonStatusBar
             // 
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 413);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 283);
+            this.ribbonStatusBar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.btnToFromLogin;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(1024, 36);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(683, 24);
             // 
             // dgvLogin
             // 
@@ -153,11 +172,13 @@
             this.colEmail,
             this.colQuyen,
             this.colScore});
-            this.dgvLogin.Location = new System.Drawing.Point(0, 231);
+            this.dgvLogin.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvLogin.Location = new System.Drawing.Point(0, 158);
+            this.dgvLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvLogin.Name = "dgvLogin";
             this.dgvLogin.RowHeadersWidth = 62;
             this.dgvLogin.RowTemplate.Height = 28;
-            this.dgvLogin.Size = new System.Drawing.Size(941, 105);
+            this.dgvLogin.Size = new System.Drawing.Size(683, 125);
             this.dgvLogin.TabIndex = 2;
             this.dgvLogin.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLogin_CellContentClick);
             // 
@@ -196,21 +217,15 @@
             this.colScore.Name = "colScore";
             this.colScore.Width = 150;
             // 
-            // btnExportPdf
-            // 
-            this.btnExportPdf.Caption = "Xuất file";
-            this.btnExportPdf.Id = 7;
-            this.btnExportPdf.Name = "btnExportPdf";
-            this.btnExportPdf.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnExportPdf_ItemClick);
-            // 
             // frmAdmin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1024, 449);
+            this.ClientSize = new System.Drawing.Size(683, 307);
             this.Controls.Add(this.dgvLogin);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.btnToFromLogin);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmAdmin";
             this.Ribbon = this.btnToFromLogin;
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
