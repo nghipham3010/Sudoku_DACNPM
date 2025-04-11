@@ -34,6 +34,7 @@
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.btnDeleteUser = new DevExpress.XtraBars.BarButtonItem();
+            this.btnAddAdmin = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -44,7 +45,7 @@
             this.colEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colQuyen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colScore = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnAddAdmin = new DevExpress.XtraBars.BarButtonItem();
+            this.btnExportPdf = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.btnToFromLogin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLogin)).BeginInit();
             this.SuspendLayout();
@@ -60,14 +61,16 @@
             this.barButtonItem1,
             this.barButtonItem2,
             this.btnDeleteUser,
-            this.btnAddAdmin});
+            this.btnAddAdmin,
+            this.btnExportPdf});
             this.btnToFromLogin.Location = new System.Drawing.Point(0, 0);
-            this.btnToFromLogin.MaxItemId = 7;
+            this.btnToFromLogin.MaxItemId = 8;
             this.btnToFromLogin.Name = "btnToFromLogin";
             this.btnToFromLogin.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
             this.btnToFromLogin.Size = new System.Drawing.Size(1024, 231);
             this.btnToFromLogin.StatusBar = this.ribbonStatusBar;
+            this.btnToFromLogin.Click += new System.EventHandler(this.btnToFromLogin_Click);
             // 
             // btnOut
             // 
@@ -102,6 +105,13 @@
             this.btnDeleteUser.Name = "btnDeleteUser";
             this.btnDeleteUser.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDeleteUser_ItemClick);
             // 
+            // btnAddAdmin
+            // 
+            this.btnAddAdmin.Caption = "Thêm Admin";
+            this.btnAddAdmin.Id = 6;
+            this.btnAddAdmin.Name = "btnAddAdmin";
+            this.btnAddAdmin.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAddAdmin_ItemClick);
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -116,6 +126,7 @@
             this.ribbonPageGroup1.ItemLinks.Add(this.btnDelete);
             this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem1);
             this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem2);
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnExportPdf);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             this.ribbonPageGroup1.Text = "ribbonPageGroup1";
             // 
@@ -185,12 +196,12 @@
             this.colScore.Name = "colScore";
             this.colScore.Width = 150;
             // 
-            // btnAddAdmin
+            // btnExportPdf
             // 
-            this.btnAddAdmin.Caption = "Thêm Admin";
-            this.btnAddAdmin.Id = 6;
-            this.btnAddAdmin.Name = "btnAddAdmin";
-            this.btnAddAdmin.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAddAdmin_ItemClick);
+            this.btnExportPdf.Caption = "Xuất file";
+            this.btnExportPdf.Id = 7;
+            this.btnExportPdf.Name = "btnExportPdf";
+            this.btnExportPdf.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnExportPdf_ItemClick);
             // 
             // frmAdmin
             // 
@@ -232,5 +243,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colQuyen;
         private System.Windows.Forms.DataGridViewTextBoxColumn colScore;
         private DevExpress.XtraBars.BarButtonItem btnAddAdmin;
+        private DevExpress.XtraBars.BarButtonItem btnExportPdf;
     }
 }
