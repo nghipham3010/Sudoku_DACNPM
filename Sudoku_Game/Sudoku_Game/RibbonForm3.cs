@@ -49,5 +49,24 @@ namespace Sudoku_Game
             // Hiển thị danh sách đã sắp xếp
             BindGrid(sort);
         }
+
+        private void btnResetScore_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            // Lặp qua toàn bộ danh sách người chơi
+            foreach (var user in context.LoginInformations)
+            {
+                user.Score = null; // Đặt điểm về null
+            }
+
+            // Lưu thay đổi xuống database
+            context.SaveChanges();
+
+            // Cập nhật lại DataGridView
+            var updatedList = context.LoginInformations.OrderByDescending(s => s.Score).ToList();
+            BindGrid(updatedList);
+
+            // Thông báo cho người dùng
+            MessageBox.Show("Đã đặt lại tất cả điểm của người chơi.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }
