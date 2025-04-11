@@ -9,7 +9,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using System.IO;
 namespace Sudoku_Game
 {
     public partial class frmAdmin : DevExpress.XtraBars.Ribbon.RibbonForm
@@ -151,6 +153,62 @@ namespace Sudoku_Game
                 LoadData(); // Sau khi đăng ký xong, làm mới lại DataGridView
             };
             signInForm.ShowDialog();
+        }
+
+        private void btnToFromLogin_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnExportPdf_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            SaveFileDialog saveDialog = new SaveFileDialog();
+            saveDialog.Filter = "PDF files (*.pdf)|*.pdf";
+            saveDialog.FileName = $"BaoCaoNguoiDung_{DateTime.Now:yyyyMMdd_HHmmss}.pdf";
+
+            if (saveDialog.ShowDialog() == DialogResult.OK)
+            {
+                ExportDataGridViewToPdf(saveDialog.FileName);
+                MessageBox.Show("Xuất PDF thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+        private void ExportDataGridViewToPdf(string filePath)
+        {
+            Document document = new Document(PageSize.A4.Rotate(), 10f, 10f, 20f, 10f);
+            PdfWriter writer = PdfWriter.GetInstance(document, new FileStream(filePath, FileMode.Create));
+            document.Open();
+
+            // Font tiếng Việt có dấu
+            BaseFont baseFont = BaseFont.CreateFont(BaseFont.HELVETICA, BaseFont.CP1250, BaseFont.NOT_EMBEDDED);
+            iTextSharp.text.Font font = new iTextSharp.text.Font(baseFont, 10, iTextSharp.text.Font.NORMAL);
+
+
+            PdfPTable table = new PdfPTable(dgvLogin.Columns.Count);
+            table.WidthPercentage = 100;
+
+            // Header
+            foreach (DataGridViewColumn column in dgvLogin.Columns)
+            {
+                PdfPCell cell = new PdfPCell(new Phrase(column.HeaderText, font));
+                cell.BackgroundColor = new BaseColor(240, 240, 240);
+                table.AddCell(cell);
+            }
+
+            // Dữ liệu
+            foreach (DataGridViewRow row in dgvLogin.Rows)
+            {
+                if (!row.IsNewRow)
+                {
+                    foreach (DataGridViewCell cell in row.Cells)
+                    {
+                        string text = cell.Value?.ToString() ?? "";
+                        table.AddCell(new Phrase(text, font));
+                    }
+                }
+            }
+
+            document.Add(table);
+            document.Close();
         }
     }
 }
