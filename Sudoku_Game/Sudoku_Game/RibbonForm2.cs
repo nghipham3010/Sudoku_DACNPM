@@ -142,5 +142,15 @@ namespace Sudoku_Game
             frmForm3 frmForm = new frmForm3();
             frmForm.Show();
         }
+
+        private void btnAddAdmin_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frmSignIn signInForm = new frmSignIn();
+            signInForm.RoleToAssign = "admin"; // Truyền quyền admin vào form
+            signInForm.FormClosed += (s, args) => {
+                LoadData(); // Sau khi đăng ký xong, làm mới lại DataGridView
+            };
+            signInForm.ShowDialog();
+        }
     }
 }

@@ -44,6 +44,7 @@
             this.colEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colQuyen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colScore = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnAddAdmin = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.btnToFromLogin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLogin)).BeginInit();
             this.SuspendLayout();
@@ -58,9 +59,10 @@
             this.btnDelete,
             this.barButtonItem1,
             this.barButtonItem2,
-            this.btnDeleteUser});
+            this.btnDeleteUser,
+            this.btnAddAdmin});
             this.btnToFromLogin.Location = new System.Drawing.Point(0, 0);
-            this.btnToFromLogin.MaxItemId = 6;
+            this.btnToFromLogin.MaxItemId = 7;
             this.btnToFromLogin.Name = "btnToFromLogin";
             this.btnToFromLogin.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
@@ -120,6 +122,7 @@
             // ribbonPageGroup2
             // 
             this.ribbonPageGroup2.ItemLinks.Add(this.btnDeleteUser);
+            this.ribbonPageGroup2.ItemLinks.Add(this.btnAddAdmin);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             this.ribbonPageGroup2.Text = "ribbonPageGroup2";
             // 
@@ -182,6 +185,13 @@
             this.colScore.Name = "colScore";
             this.colScore.Width = 150;
             // 
+            // btnAddAdmin
+            // 
+            this.btnAddAdmin.Caption = "Thêm Admin";
+            this.btnAddAdmin.Id = 6;
+            this.btnAddAdmin.Name = "btnAddAdmin";
+            this.btnAddAdmin.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAddAdmin_ItemClick);
+            // 
             // frmAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -221,5 +231,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colEmail;
         private System.Windows.Forms.DataGridViewTextBoxColumn colQuyen;
         private System.Windows.Forms.DataGridViewTextBoxColumn colScore;
+        private DevExpress.XtraBars.BarButtonItem btnAddAdmin;
     }
 }
