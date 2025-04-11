@@ -141,6 +141,7 @@
             // 
             // pnlSudocku
             // 
+            this.pnlSudocku.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pnlSudocku.Location = new System.Drawing.Point(12, 197);
             this.pnlSudocku.Name = "pnlSudocku";
             this.pnlSudocku.Size = new System.Drawing.Size(332, 372);
@@ -148,6 +149,7 @@
             // 
             // pnlNumber
             // 
+            this.pnlNumber.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pnlNumber.Location = new System.Drawing.Point(361, 229);
             this.pnlNumber.Name = "pnlNumber";
             this.pnlNumber.Size = new System.Drawing.Size(210, 207);
@@ -155,6 +157,7 @@
             // 
             // statusStrip
             // 
+            this.statusStrip.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.statusStrip.Dock = System.Windows.Forms.DockStyle.None;
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1});
@@ -177,6 +180,7 @@
             // 
             // statusStrip1
             // 
+            this.statusStrip1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.statusStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel2});
@@ -194,6 +198,7 @@
             // 
             // statusStrip2
             // 
+            this.statusStrip2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.statusStrip2.Dock = System.Windows.Forms.DockStyle.None;
             this.statusStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel3});

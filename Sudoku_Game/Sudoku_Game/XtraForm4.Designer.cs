@@ -29,20 +29,21 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.btnSignIn = new System.Windows.Forms.Button();
-            this.btnOut = new System.Windows.Forms.Button();
-            this.txtUserName = new System.Windows.Forms.TextBox();
-            this.txtPass = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtPass = new System.Windows.Forms.TextBox();
+            this.txtUserName = new System.Windows.Forms.TextBox();
+            this.btnOut = new System.Windows.Forms.Button();
+            this.btnSignIn = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.Controls.Add(this.txtEmail);
             this.panel1.Controls.Add(this.txtPass);
             this.panel1.Controls.Add(this.txtUserName);
@@ -57,56 +58,27 @@
             this.panel1.Size = new System.Drawing.Size(300, 220);
             this.panel1.TabIndex = 0;
             // 
-            // label1
+            // txtEmail
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(3, 14);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(115, 33);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Đăng Ký";
+            this.txtEmail.Location = new System.Drawing.Point(117, 145);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(131, 21);
+            this.txtEmail.TabIndex = 8;
             // 
-            // label2
+            // txtPass
             // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(32, 62);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Tên đăng nhập";
+            this.txtPass.Location = new System.Drawing.Point(117, 103);
+            this.txtPass.Name = "txtPass";
+            this.txtPass.Size = new System.Drawing.Size(131, 21);
+            this.txtPass.TabIndex = 7;
+            this.txtPass.UseSystemPasswordChar = true;
             // 
-            // label3
+            // txtUserName
             // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(34, 106);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Mật Khẩu";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(36, 145);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(31, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Email";
-            // 
-            // btnSignIn
-            // 
-            this.btnSignIn.Location = new System.Drawing.Point(66, 178);
-            this.btnSignIn.Name = "btnSignIn";
-            this.btnSignIn.Size = new System.Drawing.Size(75, 22);
-            this.btnSignIn.TabIndex = 4;
-            this.btnSignIn.Text = "Đăng ký";
-            this.btnSignIn.UseVisualStyleBackColor = true;
-            this.btnSignIn.Click += new System.EventHandler(this.btnSignIn_Click);
+            this.txtUserName.Location = new System.Drawing.Point(117, 59);
+            this.txtUserName.Name = "txtUserName";
+            this.txtUserName.Size = new System.Drawing.Size(131, 21);
+            this.txtUserName.TabIndex = 6;
             // 
             // btnOut
             // 
@@ -118,27 +90,56 @@
             this.btnOut.UseVisualStyleBackColor = true;
             this.btnOut.Click += new System.EventHandler(this.btnOut_Click);
             // 
-            // txtUserName
+            // btnSignIn
             // 
-            this.txtUserName.Location = new System.Drawing.Point(117, 59);
-            this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(131, 21);
-            this.txtUserName.TabIndex = 6;
+            this.btnSignIn.Location = new System.Drawing.Point(66, 178);
+            this.btnSignIn.Name = "btnSignIn";
+            this.btnSignIn.Size = new System.Drawing.Size(75, 22);
+            this.btnSignIn.TabIndex = 4;
+            this.btnSignIn.Text = "Đăng ký";
+            this.btnSignIn.UseVisualStyleBackColor = true;
+            this.btnSignIn.Click += new System.EventHandler(this.btnSignIn_Click);
             // 
-            // txtPass
+            // label4
             // 
-            this.txtPass.Location = new System.Drawing.Point(117, 103);
-            this.txtPass.Name = "txtPass";
-            this.txtPass.Size = new System.Drawing.Size(131, 21);
-            this.txtPass.TabIndex = 7;
-            this.txtPass.UseSystemPasswordChar = true;
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(36, 145);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(31, 13);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Email";
             // 
-            // txtEmail
+            // label3
             // 
-            this.txtEmail.Location = new System.Drawing.Point(117, 145);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(131, 21);
-            this.txtEmail.TabIndex = 8;
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(34, 106);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(52, 13);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Mật Khẩu";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(32, 62);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(79, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Tên đăng nhập";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(3, 14);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(115, 33);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Đăng Ký";
             // 
             // frmSignIn
             // 
